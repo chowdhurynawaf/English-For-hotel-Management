@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OcZ-3e-Y1u">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Tutorial View Controller-->
+        <scene sceneID="roC-5Y-CQJ">
+            <objects>
+                <viewController storyboardIdentifier="first" id="OcZ-3e-Y1u" customClass="FirstTutorialViewController" customModule="EnglishForHotelManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLj-m9-5Sy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_Walkthrough v1" translatesAutoresizingMaskIntoConstraints="NO" id="s49-D1-lwk">
+                                <rect key="frame" x="20" y="20" width="374" height="842"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMf-QV-Ym9">
+                                <rect key="frame" x="36" y="736" width="341" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="RQf-l0-Kqv"/>
+                                    <constraint firstAttribute="height" constant="79" id="TqM-iE-GqL"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Continue Button"/>
+                                <connections>
+                                    <action selector="firstPageContinue:" destination="OcZ-3e-Y1u" eventType="touchUpInside" id="8h7-VZ-IZY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s49-D1-lwk" firstAttribute="bottom" secondItem="or1-6p-dO7" secondAttribute="bottom" id="2w7-eR-Lf7"/>
+                            <constraint firstItem="or1-6p-dO7" firstAttribute="trailing" secondItem="XMf-QV-Ym9" secondAttribute="trailing" constant="37" id="HaS-A5-nZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="s49-D1-lwk" secondAttribute="trailing" constant="20" symbolic="YES" id="K8a-qb-7r1"/>
+                            <constraint firstItem="s49-D1-lwk" firstAttribute="leading" secondItem="aLj-m9-5Sy" secondAttribute="leading" constant="20" symbolic="YES" id="aNr-to-OrC"/>
+                            <constraint firstItem="s49-D1-lwk" firstAttribute="top" secondItem="aLj-m9-5Sy" secondAttribute="top" constant="20" symbolic="YES" id="cuX-9n-sMH"/>
+                            <constraint firstItem="XMf-QV-Ym9" firstAttribute="leading" secondItem="or1-6p-dO7" secondAttribute="leading" constant="36" id="duh-WA-Ybp"/>
+                            <constraint firstItem="or1-6p-dO7" firstAttribute="bottom" secondItem="XMf-QV-Ym9" secondAttribute="bottom" constant="47" id="eCK-h7-uD9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="or1-6p-dO7"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstPageContinueBtn" destination="XMf-QV-Ym9" id="aMq-f3-Uj2"/>
+                        <segue destination="BF3-CW-HAw" kind="modal" identifier="firstToSecond" modalPresentationStyle="fullScreen" id="XvB-1j-Ow6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIR-dc-YdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="632.8125"/>
+        </scene>
+        <!--second-->
+        <scene sceneID="oZW-Hh-4fB">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="second" storyboardName="SecondTutorial" referencedIdentifier="second" id="BF3-CW-HAw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2CA-Eo-m5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="627"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="02_Walkthrough v1" width="375" height="812"/>
+        <image name="Continue Button" width="345" height="76"/>
+    </resources>
+</document>

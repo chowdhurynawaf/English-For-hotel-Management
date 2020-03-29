@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Third Tutorial View Controller-->
+        <scene sceneID="W28-f1-htq">
+            <objects>
+                <viewController storyboardIdentifier="third" id="OhU-Xx-2aT" customClass="ThirdTutorialViewController" customModule="EnglishForHotelManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocA-85-mAD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_Walkthrough v3" translatesAutoresizingMaskIntoConstraints="NO" id="lkM-NB-7Dg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-63-vyS">
+                                <rect key="frame" x="26" y="551" width="319" height="76"/>
+                                <state key="normal" title="Button" image="Get Started Button "/>
+                                <connections>
+                                    <action selector="getStartedBtn:" destination="OhU-Xx-2aT" eventType="touchUpInside" id="kYu-ym-UEr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kzR-uj-Chc" firstAttribute="bottom" secondItem="Wsf-63-vyS" secondAttribute="bottom" constant="40" id="Ctc-Rn-Zqd"/>
+                            <constraint firstItem="Wsf-63-vyS" firstAttribute="leading" secondItem="kzR-uj-Chc" secondAttribute="leading" constant="26" id="JKu-Du-bsv"/>
+                            <constraint firstItem="kzR-uj-Chc" firstAttribute="bottom" secondItem="lkM-NB-7Dg" secondAttribute="bottom" id="Mqb-Rj-DQH"/>
+                            <constraint firstItem="kzR-uj-Chc" firstAttribute="trailing" secondItem="Wsf-63-vyS" secondAttribute="trailing" constant="30" id="XYd-DF-62f"/>
+                            <constraint firstItem="lkM-NB-7Dg" firstAttribute="leading" secondItem="kzR-uj-Chc" secondAttribute="leading" id="jQb-7h-MF0"/>
+                            <constraint firstItem="kzR-uj-Chc" firstAttribute="trailing" secondItem="lkM-NB-7Dg" secondAttribute="trailing" id="qYF-Eq-nlX"/>
+                            <constraint firstItem="lkM-NB-7Dg" firstAttribute="top" secondItem="kzR-uj-Chc" secondAttribute="top" id="wRT-Zb-6Of"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kzR-uj-Chc"/>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedBtn" destination="Wsf-63-vyS" id="JEh-3w-Qex"/>
+                        <segue destination="1Xv-BH-sPM" kind="modal" identifier="getStartedToSignIn" modalPresentationStyle="fullScreen" id="MSU-8C-YDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBH-wx-NV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="60.719640179910051"/>
+        </scene>
+        <!--signIn-->
+        <scene sceneID="ZBK-bi-u7W">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" referencedIdentifier="signIn" id="1Xv-BH-sPM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3f-fX-GrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="57"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="02_Walkthrough v3" width="375" height="812"/>
+        <image name="Get Started Button " width="345" height="76"/>
+    </resources>
+</document>
